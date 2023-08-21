@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer-Sale</title>
+    <!-- tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./images/Summer 1.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+<!-- internal css -->
+<script src="https://kit.fontawesome.com/85b6d69eb9.js" crossorigin="anonymous"></script>
+<style>
+    body{
+        font-family: 'Work Sans', sans-serif;
+    }
+</style>
+</head>
+<body>
+    <!-- this header section -->
+    <header class="lg:flex lg:justify-evenly lg:w-auto lg:bg-[#F9F6E2;] items-center">
+        <div>
+            <h5 class="text-2xl	font-medium	text-[#111] text-center">---SALE FEVER---</h5>
+            <h1 class="text-6xl ml-7 text-[#111] font-bold mt-10">Purchase TK 200 or <br>above & get <span class="text-[#E527B2]">20% off</span></h1>
+            <p class="text-2xl font-medium text-[#111] text-center mt-10">Use Promo Code <span class=" bg-[#E527B2] text-white p-2 rounded-md">SELL200</span></p>
+            
+        </div>
+        <div>
+            <img class="lg:w-[600] lg:h-[600px]" src="./images/Summer 1.png" alt="">
+        </div>
+    </header>
+    <main>
+        <aside class="lg:float-right 	">
+            <div class="ml-10 mt-16 ">
+                <h1>Have coupon?</h1>
+                    <div class="join">
+                        <input class="input input-bordered join-item" id="couponcode" placeholder="Coupon code"/>
+                        <button class=" btn btn- bg-[#E527B2] join-item rounded-r-xl" id="couponbtn"disabled>Apply</button>
+                        
+                    </div>
+                    <div id="get-price">
+                        <div id="addtocart"></div>
+                        <h3>Total price: <span id="totalprice">00</span>TK</h3>
+                            <h3>Discount:<span id="discountprice">00</span>TK</h3>
+                            <h3> Total:<span id="Finalprice">00</span>TK</h3>
+
+                            <!-- Open the modal using ID.showModal() method -->
+<button id="buy-btn" class="mr-40 w-72 h-14 bg-[#E527B2] text-xl text-white rounded-md hover:bg-pink-700 btn btn-wide"  onclick="my_modal_1.showModal()" disabled>Make Purchase</button>
+
+<dialog id="my_modal_1" class="modal">
+  <form method="dialog" class="modal-box">
+    <img class="mx-36" src="./images/congo.png" alt="">
+    <h3 class="font-bold text-4xl text-center">Congratulations</h3>
+    <p class="py-4 text-center">Your Purchase the product</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="mr-40 w-44 h-14 bg-[#E527B2] text-xl text-white rounded-md hover:bg-pink-700 btn" onclick="openWin()">Go Home</button>
+    </div>
+  </form>
+</dialog>
+            </div>
+            </div></aside>
+        <!-- this is card section  -->
+        <h1 class="text-[#111] text-4xl font-semibold mt-14 ml-24">Kitchenware</h1>
+        <section class="lg:flex justify-evenly ml-14">
+            <!-- card1 -->
+            <div class="card w-80 h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                <div class="bg-[#f5f5f5]">
+                <img class="ml-24" src="./images/prod1.png" alt="item">
+                </div>
+                <div class="card-body text-center ">
+                    <div class="rating ml-16">
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                    </div>
+                <h2 class="text-2xl font-semibold text-center">K. Accessories</h2>
+                <p class="text-xl text-[#11111180]"><span>39.00</span> TK</p>
+                </div>
+            </div>
+            <!-- card2 -->
+            <div class=" card w-80 h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                <div class="bg-[#f5f5f5]">
+                <img class="ml-24"  src="./images/prod2.png" alt="item">
+                </div>
+                <div class="card-body text-center">
+                    <div class="rating ml-16">
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                    </div>
+                <h2 class="text-2xl font-semibold text-center">Kitchen set</h2>
+                <p class="text-xl text-[#11111180]"><span>25.00</span> TK</p>
+                </div>
+            </div>
+            <!-- card3 -->
+            <div class=" card w-80 h-80 bg-base-100 shadow-xl ml-7 mt-14   " onclick="clickCard(this)">
+                <div class="bg-[#f5f5f5]">
+                    <img class="ml-24"src="./images/prod3.png" alt="item">
+                </div>
+                <div class="card-body text-center">
+                    <div class="rating ml-16">
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                    </div>
+                <h2 class="text-2xl font-semibold text-center">Home Cooker</h2>
+                <p class="text-xl text-[#11111180]">49.00 <span>TK</span></p>
+                </div>
+            </div></section>
+            <!-- this is cart section -->
+        
+        <h1 class="text-[#111] text-4xl font-semibold mt-14 ml-24">Sportswear</h1>
+            
+        
+        <section class="lg:flex gap-px ml-14 mr-2 mb-4">
+                <!-- card4 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod4.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Sports Back Cap</h2>
+                    <p class="text-xl text-[#11111180]"><span>49.00</span> TK</p>
+                    </div>
+                </div>
+                <!-- card5 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod5.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Full Jersey Set</h2>
+                    <p class="text-xl text-[#11111180]"><span>69.00</span> TK</p>
+                    </div>
+                </div>
+                <!-- card6 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod6.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Sports cates</h2>
+                    <p class="text-xl text-[#11111180]"><span>159.00</span> TK</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section 3 -->
+            <h1 class="text-[#111] text-4xl font-semibold mt-14 ml-24">Sportswear</h1>
+            <section class="lg:flex gap-px ml-14 mr-2 mb-4">
+                <!-- card7 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod7.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Single Relax Chair</h2>
+                    <p class="text-xl text-[#11111180]"><span>185.00</span> TK</p>
+                    </div>
+                </div>
+                <!-- card8 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod8.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                        <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Children play</h2>
+                    <p class="text-xl text-[#11111180]"><span>299.00</span> TK</p>
+                    </div>
+                </div>
+                <!-- card9 -->
+                <div class="card w-[300px] h-80 bg-base-100 shadow-xl ml-7 mt-14    " onclick="clickCard(this)">
+                    <div class="bg-[#f5f5f5]">
+                    <img class="ml-24" src="./images/prod9.png" alt="item">
+                    </div>
+                    <div class="card-body text-center ">
+                        <div class="rating ml-16">
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-solid fa-star" style="color:yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                            <i class="fa-regular fa-star" style="color: yellow;"></i>
+                        </div>
+                    <h2 class="text-2xl font-semibold text-center">Flexible Sofa</h2>
+                    <p class="text-xl text-[#11111180]"><span>339.00</span> TK</p>
+                    </div>
+                </div>
+            </section>
+
+            
+    </main>
+
+<script src="index.js"></script>
+</body>
+</html>
